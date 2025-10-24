@@ -35,7 +35,7 @@ def get_field_value(rec, field):
     return rec.get(field, "")
 
 # === Export CSV Helper ===
-def export_to_csv(query, filename, fields, alias="rca-badger-258-template"):
+def export_to_csv(query, filename, fields, alias="rca-gartner-genset-sysconfig"):
     print(f"📦 Exporting: {filename.replace('data/', '')}")
     print("🔍 SOQL Query:", query.strip())
     
@@ -81,7 +81,7 @@ def export_to_csv(query, filename, fields, alias="rca-badger-258-template"):
     
 
 # === Blob Download Helper ===
-def download_constraint_model_blobs(alias="rca-badger-258-template", input_csv="data/ExpressionSetDefinitionVersion.csv"):
+def download_constraint_model_blobs(alias="rca-gartner-genset-sysconfig", input_csv="data/ExpressionSetDefinitionVersion.csv"):
     print("📥 Downloading ConstraintModel blobs...")
 
     try:
