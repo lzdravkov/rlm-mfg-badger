@@ -1,0 +1,38 @@
+{
+  "apiVersion": "65.0",
+  "excludeIdsFromCSVFiles": "true",
+  "objectSets": [
+    {
+      "objects": [
+        {
+          "query": "SELECT Name, Status, Frequency, StartDate, EndDate, ProgramReferenceNumber, RebateProgramUrl,  PayoutCalculationDayCount, GracePeriodDayCount, RebateProgramUrl, CurrencyIsoCode FROM RebateProgram",
+          "operation": "Upsert",
+          "externalId": "Name",
+          "excluded": false
+        },
+        {
+            "query": "SELECT Name, Status, StartDate, EndDate, RebateProgramId, PayoutCalculationDate, TransactionGracePeriodDate, CurrencyIsoCode FROM RebateProgramPayoutPeriod",
+            "operation": "Upsert",
+            "externalId": "Name;RebateProgram.Name"
+        },
+        {
+            "query": "SELECT Name, MemberStatus, AccountId, RebateProgramId, ShipToAccountId, IsPayoutCalcSkipped, CurrencyIsoCode FROM RebateProgramMember",
+            "operation": "Upsert",
+            "externalId": "Account.Name;RebateProgram.Name"
+        },
+        {
+            "query": "SELECT Name, Status, RebateProgramId, AggregateObjectName, BenefitQualifierField, AccrualRate, CalculationBasis, CalcObjectId, CalculationMethod, CalculationType, CurrencyIsoCode, FilterAction, FilterLogic, IsIntegratable, MeasureField, RebateMeasureType, UnitofMeasureId FROM ProgramRebateType",
+            "operation": "Upsert",
+            "externalId": "Name;RebateProgram.Name"
+        },
+        {
+            "query": "SELECT Name, Status, ProgramRebateTypeId, ProductId, BenefitValue, EffectiveStartDate, EffectiveEndDate, MaximumMeasureFieldValue, MaximumQualifyingValue, MinimumQualifyingValue, CurrencyIsoCode FROM ProgramRebateTypeBenefit",
+            "operation": "Upsert",
+            "externalId": "Name;ProgramRebateType.Name"
+        }
+
+      ]
+    }
+  ],
+  "orgs": []
+}
