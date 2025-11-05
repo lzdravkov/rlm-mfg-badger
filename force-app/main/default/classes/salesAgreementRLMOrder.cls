@@ -103,6 +103,7 @@ global class salesAgreementRLMOrder{
             quoteFieldValues.put('Pricebook2Id',saProducts[0].priceBookId);
             quoteFieldValues.put('StartDate',orderDateString);
             quoteFieldValues.put('Sales_Agreement__c',saProducts[0].salesAgreementId);
+            quoteFieldValues.put('ContractId',saProducts[0].contractId);
             
             //bill to and ship to info
             //
@@ -185,6 +186,9 @@ global class salesAgreementRLMOrder{
 
             @InvocableVariable(required=true)
             global Date orderDate;  
+            
+            @InvocableVariable(required=false)
+            global string contractId;  
         }
         
     

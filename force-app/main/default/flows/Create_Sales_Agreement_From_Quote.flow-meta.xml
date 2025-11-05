@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Open_new_Sales_Agreement</name>
         <label>Open new Sales Agreement</label>
-        <locationX>176</locationX>
-        <locationY>1382</locationY>
+        <locationX>182</locationX>
+        <locationY>2090</locationY>
         <actionName>c:OpenSObject</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -23,8 +23,8 @@
     <assignments>
         <name>Add_SA_Prod_to_List</name>
         <label>Add SA Prod to List</label>
-        <locationX>440</locationX>
-        <locationY>998</locationY>
+        <locationX>446</locationX>
+        <locationY>1706</locationY>
         <assignmentItems>
             <assignToReference>recsSAProducts</assignToReference>
             <operator>Add</operator>
@@ -46,8 +46,8 @@
     <assignments>
         <name>Set_new_SA_Product</name>
         <label>Set new SA Product</label>
-        <locationX>352</locationX>
-        <locationY>782</locationY>
+        <locationX>358</locationX>
+        <locationY>1490</locationY>
         <assignmentItems>
             <assignToReference>loopSAProduct.InitialPlannedQuantity</assignToReference>
             <operator>Assign</operator>
@@ -66,7 +66,7 @@
             <assignToReference>loopSAProduct.SalesPrice</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Loop_through_Quote_Products.UnitPrice</elementReference>
+                <elementReference>Loop_through_Quote_Products.NetUnitPrice</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -90,6 +90,13 @@
                 <elementReference>Loop_through_Quote_Products.PricebookEntryId</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>loopSAProduct.DiscountPercentage</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_through_Quote_Products.Discount</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Dupe_check</targetReference>
         </connector>
@@ -103,10 +110,60 @@
         </value>
     </choices>
     <decisions>
+        <name>Check_if_AccountId_Is_Null</name>
+        <label>Check if AccountId Is Null</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>Get_Quote_Line_Items</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome - QuoteAccountID Exists</defaultConnectorLabel>
+        <rules>
+            <name>QuoteAccountId_is_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Quote.QuoteAccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_QuoteAccountId</targetReference>
+            </connector>
+            <label>QuoteAccountId is Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Create_Contract_Decision</name>
+        <label>Create Contract Decision</label>
+        <locationX>182</locationX>
+        <locationY>974</locationY>
+        <defaultConnector>
+            <targetReference>Update_Contract_Id_on_Agreement</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Contract</defaultConnectorLabel>
+        <rules>
+            <name>Create_Contract</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Create_Pricing_Contract</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Contract_w_agreement</targetReference>
+            </connector>
+            <label>Create Contract</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Dupe_check</name>
         <label>Dupe check</label>
-        <locationX>352</locationX>
-        <locationY>890</locationY>
+        <locationX>358</locationX>
+        <locationY>1598</locationY>
         <defaultConnector>
             <targetReference>Add_SA_Prod_to_List</targetReference>
         </defaultConnector>
@@ -127,6 +184,7 @@
             <label>Dupe product ID found</label>
         </rules>
     </decisions>
+    <description>MFG - Create Contract w/ Sales Agreement Relationship Associations</description>
     <dynamicChoiceSets>
         <name>scheduleFrequencyOptions</name>
         <dataType>String</dataType>
@@ -158,8 +216,8 @@
     <loops>
         <name>Loop_through_Quote_Products</name>
         <label>Loop through Quote Products</label>
-        <locationX>176</locationX>
-        <locationY>674</locationY>
+        <locationX>182</locationX>
+        <locationY>1382</locationY>
         <collectionReference>Get_Quote_Line_Items</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -191,10 +249,10 @@
     <recordCreates>
         <name>Create_New_Sales_Agreement</name>
         <label>Create New Sales Agreement</label>
-        <locationX>176</locationX>
-        <locationY>566</locationY>
+        <locationX>182</locationX>
+        <locationY>866</locationY>
         <connector>
-            <targetReference>Loop_through_Quote_Products</targetReference>
+            <targetReference>Create_Contract_Decision</targetReference>
         </connector>
         <inputAssignments>
             <field>AccountId</field>
@@ -244,8 +302,8 @@
     <recordCreates>
         <name>Insert_SA_Products</name>
         <label>Insert SA Products</label>
-        <locationX>176</locationX>
-        <locationY>1274</locationY>
+        <locationX>182</locationX>
+        <locationY>1982</locationY>
         <connector>
             <targetReference>Open_new_Sales_Agreement</targetReference>
         </connector>
@@ -254,8 +312,8 @@
     <recordLookups>
         <name>defaultScheduleFrequency</name>
         <label>defaultScheduleFrequency</label>
-        <locationX>176</locationX>
-        <locationY>350</locationY>
+        <locationX>182</locationX>
+        <locationY>650</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>New_Sales_Agreement</targetReference>
@@ -282,11 +340,11 @@
     <recordLookups>
         <name>Get_Quote</name>
         <label>Get Quote</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Get_Quote_Line_Items</targetReference>
+            <targetReference>Check_if_AccountId_Is_Null</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -303,8 +361,8 @@
     <recordLookups>
         <name>Get_Quote_Line_Items</name>
         <label>Get Quote Line Items</label>
-        <locationX>176</locationX>
-        <locationY>242</locationY>
+        <locationX>182</locationX>
+        <locationY>542</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>defaultScheduleFrequency</targetReference>
@@ -321,11 +379,59 @@
         <object>QuoteLineItem</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>Update_Contract_Id_on_Agreement</name>
+        <label>Update Contract Id on Agreement</label>
+        <locationX>182</locationX>
+        <locationY>1274</locationY>
+        <connector>
+            <targetReference>Loop_through_Quote_Products</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Create_New_Sales_Agreement</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Contract__c</field>
+            <value>
+                <elementReference>Create_Contract_w_agreement.outputContractId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>SalesAgreement</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_QuoteAccountId</name>
+        <label>Update QuoteAccountId</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <connector>
+            <targetReference>Get_Quote_Line_Items</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RelatedQuoteId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>QuoteAccountId</field>
+            <value>
+                <elementReference>Get_Quote.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Quote</object>
+    </recordUpdates>
     <screens>
         <name>New_Sales_Agreement</name>
         <label>New Sales Agreement</label>
-        <locationX>176</locationX>
-        <locationY>458</locationY>
+        <locationX>182</locationX>
+        <locationY>758</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -455,17 +561,59 @@
                 </width>
             </styleProperties>
         </fields>
+        <fields>
+            <name>Create_Pricing_Contract</name>
+            <dataType>Boolean</dataType>
+            <defaultValue>
+                <booleanValue>false</booleanValue>
+            </defaultValue>
+            <fieldText>Create Pricing Contract</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Quote</targetReference>
         </connector>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Create_Contract_w_agreement</name>
+        <label>Create Contract w/ agreement</label>
+        <locationX>50</locationX>
+        <locationY>1082</locationY>
+        <connector>
+            <targetReference>Update_Contract_Id_on_Agreement</targetReference>
+        </connector>
+        <flowName>MFG_RC_Create_Contract_From_Quote</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>salesAgreementId</name>
+            <value>
+                <elementReference>Create_New_Sales_Agreement</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
     <variables>
         <name>loopQuoteProduct</name>
         <dataType>SObject</dataType>
