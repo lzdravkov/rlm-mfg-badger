@@ -1259,6 +1259,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentInstanceProperties>
+                    <name>flowApiName</name>
+                    <value>RC_AA_Evaluate_Approval_Request</value>
+                </componentInstanceProperties>
+                <componentName>runtime_approvals:approvalsWorkflowComponent</componentName>
+                <identifier>runtime_approvals_approvalsWorkflowComponent</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentName>runtime_approvals:approvalTrace</componentName>
                 <identifier>runtime_approvals_approvalTrace</identifier>
             </componentInstance>
