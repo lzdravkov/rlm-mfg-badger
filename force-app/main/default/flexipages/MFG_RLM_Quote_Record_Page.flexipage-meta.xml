@@ -104,6 +104,9 @@
                             <value>QuoteLineItem.Product2.Name[Product2]</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>QuoteLineItem.QuoteLineGroup.Name[QuoteLineGroup]</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>QuoteLineItem.Quantity</value>
                         </valueListItems>
                         <valueListItems>
@@ -162,36 +165,39 @@
                             <value>QuoteLineItem.NetTotalPrice</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>QuoteLineItem.TotalPrice</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>QuoteLineItem.Discount</value>
                         </valueListItems>
                         <valueListItems>
                             <value>QuoteLineItem.Quantity</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>QuoteLineItem.RC_Approval__c</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>QuoteLineItem.RC_Approval_Level_Calc__c</value>
+                            <value>QuoteLineItem.UnitCost</value>
                         </valueListItems>
                         <valueListItems>
                             <value>QuoteLineItem.Unit_Cost__c</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>QuoteLineItem.TotalCost</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>QuoteLineItem.Total_Cost__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Quote.Margin__c</value>
+                            <value>QuoteLineItem.Margin</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>QuoteLineItem.Margin__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>QuoteLineItem.Covered_Asset__r.Name[Asset]</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>QuoteLineItem.Covered_Asset_SN__c</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
-                <componentName>runtime_revenue_foundation:transactionLineTable</componentName>
-                <identifier>runtime_revenue_foundation_transactionLineTable</identifier>
+                <componentName>runtime_rca:salesTxnLineTable</componentName>
+                <identifier>runtime_rca_salesTxnLineTable</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1261,7 +1267,7 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>flowApiName</name>
-                    <value>RC_AA_Evaluate_Approval_Request</value>
+                    <value>RC_Quote_Smart_Approval</value>
                 </componentInstanceProperties>
                 <componentName>runtime_approvals:approvalsWorkflowComponent</componentName>
                 <identifier>runtime_approvals_approvalsWorkflowComponent</identifier>

@@ -16,6 +16,12 @@
         </dataTypeMappings>
         <flowTransactionModel>Automatic</flowTransactionModel>
         <inputParameters>
+            <name>contractId</name>
+            <value>
+                <elementReference>get_Sales_Agreement_details.Contract__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
             <name>customerAcctId</name>
             <value>
                 <elementReference>get_Sales_Agreement_details.AccountId</elementReference>
@@ -78,6 +84,7 @@
             <stringValue>{&quot;location&quot;:&quot;top&quot;,&quot;type&quot;:&quot;simple&quot;}</stringValue>
         </value>
     </customProperties>
+    <description>V2 - Include ContractId Input &amp; new order start date for contracted pricing</description>
     <environments>Default</environments>
     <formulas>
         <name>salesagreementIdLEFT</name>
@@ -87,7 +94,7 @@
     <formulas>
         <name>TodaysDate</name>
         <dataType>Date</dataType>
-        <expression>TODAY()</expression>
+        <expression>TODAY()+1</expression>
     </formulas>
     <interviewLabel>RLM - Sales Agreement Order Execution {!$Flow.CurrentDateTime}</interviewLabel>
     <label>RLM - Sales Agreement Order Execution</label>
