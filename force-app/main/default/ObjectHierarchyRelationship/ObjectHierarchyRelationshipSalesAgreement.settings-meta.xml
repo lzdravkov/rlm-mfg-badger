@@ -21,7 +21,7 @@
       </mappingFields>
       <mappingFields>
         <inputField>TotalActualAmount</inputField>
-        <outputField>TransactionAmount</outputField>
+        <outputField>Distance</outputField>
       </mappingFields>
    </childObjectMapping>
    <usageType>EligibleProgramRebateType</usageType>
