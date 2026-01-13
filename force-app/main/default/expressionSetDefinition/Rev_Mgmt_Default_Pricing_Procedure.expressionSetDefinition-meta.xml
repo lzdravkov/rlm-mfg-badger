@@ -225,13 +225,6 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>section-0-output-type</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>Currency</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>condition-0-input</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -288,17 +281,24 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>rollup-condition-data-type</name>
+                    <name>condition-2-input-data-type</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>Boolean</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>write-back-data-type</name>
                     <output>false</output>
                     <type>Literal</type>
                     <value>Text</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>condition-2-input-data-type</name>
+                    <name>rollup-condition-data-type</name>
                     <output>false</output>
                     <type>Literal</type>
-                    <value>Boolean</value>
+                    <value>Text</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -323,10 +323,10 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>write-back-data-type</name>
+                    <name>section-0-output-type</name>
                     <output>false</output>
                     <type>Literal</type>
-                    <value>Text</value>
+                    <value>Currency</value>
                 </parameters>
             </customElement>
             <description>Aggregate Price</description>
@@ -479,6 +479,13 @@
             <customElement>
                 <parameters>
                     <input>true</input>
+                    <name>sectionJsonString1</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>{&quot;whereConditions&quot;:[]}</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>section-0-input1</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -492,11 +499,11 @@
                     <value>1</value>
                 </parameters>
                 <parameters>
-                    <input>true</input>
-                    <name>sectionJsonString1</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>{&quot;whereConditions&quot;:[]}</value>
+                    <input>false</input>
+                    <name>section-0-output</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>PricingDate</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -504,13 +511,6 @@
                     <output>false</output>
                     <type>Literal</type>
                     <value>{&quot;whereConditions&quot;:[{&quot;field&quot;:{&quot;dataType&quot;:&quot;DateTime&quot;,&quot;name&quot;:&quot;section-0-input1&quot;,&quot;value&quot;:&quot;EffectiveDate&quot;,&quot;allowCompatibleDataTypes&quot;:true},&quot;value&quot;:{&quot;dataType&quot;:&quot;DateTime&quot;,&quot;name&quot;:&quot;section-0-output&quot;,&quot;value&quot;:&quot;PricingDate&quot;,&quot;allowCompatibleDataTypes&quot;:true}}]}</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
-                    <name>section-0-output</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>PricingDate</value>
                 </parameters>
             </customElement>
             <description>Assignment</description>
@@ -629,6 +629,13 @@
             <customElement>
                 <parameters>
                     <input>true</input>
+                    <name>section-0-input1</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>ListPrice</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>sectionCount</name>
                     <output>false</output>
                     <type>Literal</type>
@@ -654,13 +661,6 @@
                     <output>true</output>
                     <type>Parameter</type>
                     <value>InputUnitPrice</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>section-0-input1</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ListPrice</value>
                 </parameters>
             </customElement>
             <description>Assignment</description>
@@ -729,20 +729,6 @@
             <customElement>
                 <parameters>
                     <input>true</input>
-                    <name>section-0-input1</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>OneTimePricingTermCountConstant</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>sectionCount</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>1</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>sectionJsonString1</name>
                     <output>false</output>
                     <type>Literal</type>
@@ -761,6 +747,20 @@
                     <output>true</output>
                     <type>Parameter</type>
                     <value>PricingTermCount</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>section-0-input1</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>OneTimePricingTermCountConstant</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>sectionCount</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>1</value>
                 </parameters>
             </customElement>
             <description>Assignment</description>
@@ -879,13 +879,6 @@
             <customElement>
                 <parameters>
                     <input>true</input>
-                    <name>sectionJsonString2</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>{&quot;whereConditions&quot;:[{&quot;field&quot;:{&quot;dataType&quot;:&quot;Numeric&quot;,&quot;name&quot;:&quot;section-0-input1&quot;,&quot;value&quot;:&quot;InclusivePriceConstant&quot;,&quot;allowCompatibleDataTypes&quot;:true},&quot;value&quot;:{&quot;dataType&quot;:&quot;Currency&quot;,&quot;name&quot;:&quot;section-0-output&quot;,&quot;value&quot;:&quot;TotalLineAmount&quot;,&quot;allowCompatibleDataTypes&quot;:true}}]}</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>section-0-input1</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -904,6 +897,13 @@
                     <output>false</output>
                     <type>Literal</type>
                     <value>{&quot;whereConditions&quot;:[]}</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>sectionJsonString2</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>{&quot;whereConditions&quot;:[{&quot;field&quot;:{&quot;dataType&quot;:&quot;Numeric&quot;,&quot;name&quot;:&quot;section-0-input1&quot;,&quot;value&quot;:&quot;InclusivePriceConstant&quot;,&quot;allowCompatibleDataTypes&quot;:true},&quot;value&quot;:{&quot;dataType&quot;:&quot;Currency&quot;,&quot;name&quot;:&quot;section-0-output&quot;,&quot;value&quot;:&quot;TotalLineAmount&quot;,&quot;allowCompatibleDataTypes&quot;:true}}]}</value>
                 </parameters>
                 <parameters>
                     <input>false</input>
@@ -1048,24 +1048,10 @@
             <customElement>
                 <parameters>
                     <input>true</input>
-                    <name>IsRealTime</name>
+                    <name>AttributeValue</name>
                     <output>false</output>
-                    <type>Literal</type>
-                    <value>false</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
-                    <name>NetUnitPrice</name>
-                    <output>true</output>
                     <type>Parameter</type>
-                    <value>NetUnitPrice</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
-                    <name>Subtotal</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>ItemNetTotalPrice</value>
+                    <value>AttributeValue</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -1111,24 +1097,10 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>AttributeValue</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>AttributeValue</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>Quantity</name>
                     <output>false</output>
                     <type>Parameter</type>
                     <value>LineItemQuantity</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>IsPriceImpacting</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>PriceImpactingAttribute</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -1199,6 +1171,34 @@
                     <output>false</output>
                     <type>Literal</type>
                     <value>Get</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>NetUnitPrice</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>NetUnitPrice</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>Subtotal</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>ItemNetTotalPrice</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>IsPriceImpacting</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>PriceImpactingAttribute</value>
                 </parameters>
                 <parameters>
                     <input>false</input>
@@ -1393,6 +1393,20 @@
             <customElement>
                 <parameters>
                     <input>true</input>
+                    <name>EffectiveFrom</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>EffectiveDate</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>EffectiveTo</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>EffectiveDate</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>ProductId</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -1456,13 +1470,6 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>LookUpId</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>0lDKY0000008WdP2AU</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>AdjustmentValueField</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -1477,38 +1484,17 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
+                    <name>LookUpId</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>0lDKY0000008WdP2AU</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>LookUpApiName</name>
                     <output>false</output>
                     <type>Literal</type>
                     <value>Bundle_Based_Adjustment_Decision_Table</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>PriceAdjustmentScheduleId</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>BundlePASIdConstant</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>ProductSellingModelId</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ProductSellingModel</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>EffectiveFrom</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>EffectiveDate</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>EffectiveTo</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>EffectiveDate</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -1559,11 +1545,110 @@
                     <type>Parameter</type>
                     <value>ItemNetTotalPrice</value>
                 </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>PriceAdjustmentScheduleId</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>BundlePASIdConstant</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>ProductSellingModelId</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>ProductSellingModel</value>
+                </parameters>
             </customElement>
             <description>Bundle-Based Price</description>
             <label>Bundle Based Adjustment Entries</label>
             <name>BundleBasedAdjustmentEntries</name>
             <parentStep>ListContainer34</parentStep>
+            <resultIncluded>false</resultIncluded>
+            <sequenceNumber>2</sequenceNumber>
+            <shouldExposExecPathMsgOnly>true</shouldExposExecPathMsgOnly>
+            <shouldExposeConditionDetails>false</shouldExposeConditionDetails>
+            <shouldShowExplExternally>false</shouldShowExplExternally>
+            <stepType>BusinessKnowledgeModel</stepType>
+        </steps>
+        <steps>
+            <actionType>ManualDiscount</actionType>
+            <customElement>
+                <parameters>
+                    <input>true</input>
+                    <name>AdjustmentType</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>ItemContractDiscountType</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>AdjustmentValue</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>ItemContractDiscountValue</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>Quantity</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>LineItemQuantity</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>InputUnitPrice</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>NetUnitPrice</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>HideWaterfall</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>sectionCount</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>0</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>selectedFunction</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>Get</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>NetUnitPrice</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>NetUnitPrice</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>Subtotal</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>ItemNetTotalPrice</value>
+                </parameters>
+            </customElement>
+            <description>Manual Discount</description>
+            <label>Contracted Pricing</label>
+            <name>ContractedPricing</name>
+            <parentStep>ListContainer43</parentStep>
             <resultIncluded>false</resultIncluded>
             <sequenceNumber>2</sequenceNumber>
             <shouldExposExecPathMsgOnly>true</shouldExposExecPathMsgOnly>
@@ -1730,13 +1815,6 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>ContributingProduct</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ContributorProduct</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>Non-TransactionalListPrice</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -1755,6 +1833,13 @@
                     <output>false</output>
                     <type>Parameter</type>
                     <value>Contributor</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>ContributingProduct</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>ContributorProduct</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -1824,10 +1909,24 @@
             <customElement>
                 <parameters>
                     <input>true</input>
+                    <name>formula-section-0-input</name>
+                    <output>false</output>
+                    <type>Formula</type>
+                    <value>InputUnitPrice * LineItemQuantity</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>Calculation Formula</name>
                     <output>false</output>
                     <type>Formula</type>
                     <value>InputUnitPrice * LineItemQuantity</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>formulaSectionCount</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>1</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -1859,6 +1958,13 @@
                 </parameters>
                 <parameters>
                     <input>false</input>
+                    <name>formula-section-0-output</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>ItemNetTotalPrice</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
                     <name>Output Variable</name>
                     <output>true</output>
                     <type>Parameter</type>
@@ -1881,10 +1987,24 @@
             <customElement>
                 <parameters>
                     <input>true</input>
+                    <name>formula-section-0-input</name>
+                    <output>false</output>
+                    <type>Formula</type>
+                    <value>NetUnitPrice * LineItemQuantity</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>Calculation Formula</name>
                     <output>false</output>
                     <type>Formula</type>
                     <value>NetUnitPrice * LineItemQuantity</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>formulaSectionCount</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>1</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -1913,6 +2033,13 @@
                     <output>false</output>
                     <type>Literal</type>
                     <value>false</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>formula-section-0-output</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>ItemNetTotalPrice</value>
                 </parameters>
                 <parameters>
                     <input>false</input>
@@ -2804,11 +2931,9 @@
                     <valueType>Literal</valueType>
                 </criteria>
                 <criteria>
-                    <operator>NotEquals</operator>
+                    <operator>IsNotNull</operator>
                     <sequenceNumber>2</sequenceNumber>
-                    <sourceFieldName>RootItemProductCode</sourceFieldName>
-                    <value>&apos;FESBA-FRD&apos;</value>
-                    <valueType>Literal</valueType>
+                    <sourceFieldName>InclusivePrice</sourceFieldName>
                 </criteria>
             </advancedCondition>
             <label>List Operation</label>
@@ -2894,13 +3019,6 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>LookUpApiName</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>Contract_Pricing_Entries_Decision_Table</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>ListPriceField</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -2919,6 +3037,13 @@
                     <output>false</output>
                     <type>Literal</type>
                     <value>0lDKY0000008WdW2AU</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>LookUpApiName</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>Contract_Pricing_Entries_Decision_Table</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -2995,91 +3120,6 @@
             <label>List Price</label>
             <name>ListPrice</name>
             <parentStep>ListContainer15</parentStep>
-            <resultIncluded>false</resultIncluded>
-            <sequenceNumber>2</sequenceNumber>
-            <shouldExposExecPathMsgOnly>true</shouldExposExecPathMsgOnly>
-            <shouldExposeConditionDetails>false</shouldExposeConditionDetails>
-            <shouldShowExplExternally>false</shouldShowExplExternally>
-            <stepType>BusinessKnowledgeModel</stepType>
-        </steps>
-        <steps>
-            <actionType>ManualDiscount</actionType>
-            <customElement>
-                <parameters>
-                    <input>true</input>
-                    <name>AdjustmentType</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ItemContractDiscountType</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>AdjustmentValue</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ItemContractDiscountValue</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>Quantity</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>LineItemQuantity</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>InputUnitPrice</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>NetUnitPrice</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>HideWaterfall</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>false</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>sectionCount</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>0</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>selectedFunction</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>Get</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>IsRealTime</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>false</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
-                    <name>NetUnitPrice</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>NetUnitPrice</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
-                    <name>Subtotal</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>ItemNetTotalPrice</value>
-                </parameters>
-            </customElement>
-            <description>Manual Discount</description>
-            <label>Manual Discount</label>
-            <name>ManualDiscount</name>
-            <parentStep>ListContainer43</parentStep>
             <resultIncluded>false</resultIncluded>
             <sequenceNumber>2</sequenceNumber>
             <shouldExposExecPathMsgOnly>true</shouldExposExecPathMsgOnly>
@@ -3177,6 +3217,20 @@
             <customElement>
                 <parameters>
                     <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>ListPrice</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>ListPrice</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>Product2Id</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -3266,20 +3320,6 @@
                     <type>Literal</type>
                     <value>Get</value>
                 </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>IsRealTime</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>false</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
-                    <name>ListPrice</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>ListPrice</value>
-                </parameters>
             </customElement>
             <description>List Price</description>
             <label>Price Book Entries</label>
@@ -3337,6 +3377,13 @@
                     <value>false</value>
                 </parameters>
                 <parameters>
+                    <input>true</input>
+                    <name>IsPropagationEnabled</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
+                </parameters>
+                <parameters>
                     <input>false</input>
                     <name>PriceWaterfall</name>
                     <output>true</output>
@@ -3371,6 +3418,13 @@
         <steps>
             <actionType>Proration</actionType>
             <customElement>
+                <parameters>
+                    <input>false</input>
+                    <name>ProrationMultiplier</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>PricingTermCount</value>
+                </parameters>
                 <parameters>
                     <input>true</input>
                     <name>EffectiveFrom</name>
@@ -3461,13 +3515,6 @@
                     <output>false</output>
                     <type>Literal</type>
                     <value>false</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
-                    <name>ProrationMultiplier</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>PricingTermCount</value>
                 </parameters>
             </customElement>
             <description>Proration</description>
@@ -3783,13 +3830,6 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>sectionCount</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>0</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>selectedFunction</name>
                     <output>false</output>
                     <type>Literal</type>
@@ -3815,6 +3855,13 @@
                     <output>true</output>
                     <type>Parameter</type>
                     <value>InputUnitPrice</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>sectionCount</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>0</value>
                 </parameters>
             </customElement>
             <description>Subscription Pricing</description>
@@ -3942,13 +3989,6 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>section-0-aggr-func-tag-type</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>Currency</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>section-0-aggr-func-tag</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -4059,6 +4099,13 @@
                     <type>Parameter</type>
                     <value>TotalAmount</value>
                 </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>section-0-aggr-func-tag-type</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>Currency</value>
+                </parameters>
             </customElement>
             <description>Aggregate Price</description>
             <label>Total Amount</label>
@@ -4073,6 +4120,34 @@
         <steps>
             <actionType>FormulaBasedPricing</actionType>
             <customElement>
+                <parameters>
+                    <input>true</input>
+                    <name>formula-section-0-input</name>
+                    <output>false</output>
+                    <type>Formula</type>
+                    <value>NetUnitPrice +  NetUnitPrice * ItemUnitPriceUplift__std</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>Calculation Formula</name>
+                    <output>false</output>
+                    <type>Formula</type>
+                    <value>NetUnitPrice +  NetUnitPrice * ItemUnitPriceUplift__std</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>writeBackData</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>[]</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>formulaSectionCount</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>1</value>
+                </parameters>
                 <parameters>
                     <input>true</input>
                     <name>HideWaterfall</name>
@@ -4102,18 +4177,11 @@
                     <value>false</value>
                 </parameters>
                 <parameters>
-                    <input>true</input>
-                    <name>Calculation Formula</name>
-                    <output>false</output>
-                    <type>Formula</type>
-                    <value>NetUnitPrice +  NetUnitPrice * ItemUnitPriceUplift__std</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>writeBackData</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>[]</value>
+                    <input>false</input>
+                    <name>formula-section-0-output</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>NetUnitPrice</value>
                 </parameters>
                 <parameters>
                     <input>false</input>
@@ -4308,6 +4376,55 @@
             <customElement>
                 <parameters>
                     <input>true</input>
+                    <name>PriceAdjustmentScheduleId</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>VolumePASIdConstant</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>LowerBound</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>LineItemQuantity</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>UpperBound</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>LineItemQuantity</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>Product2Id</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>Product</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>ProductSellingModelId</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>ProductSellingModel</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>EffectiveFrom</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>EffectiveDate</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>EffectiveTo</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>EffectiveDate</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>Quantity</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -4343,59 +4460,10 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>PriceAdjustmentScheduleId</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>VolumePASIdConstant</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>LowerBound</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>LineItemQuantity</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>UpperBound</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>LineItemQuantity</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>EffectiveTo</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>EffectiveDate</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>Product2Id</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>Product</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>LookUpId</name>
                     <output>false</output>
                     <type>Literal</type>
                     <value>0lDKY0000008WdM2AU</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>ProductSellingModelId</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ProductSellingModel</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>EffectiveFrom</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>EffectiveDate</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -4410,6 +4478,20 @@
                     <output>false</output>
                     <type>Literal</type>
                     <value>false</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>NetUnitPrice</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>NetUnitPrice</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>Subtotal</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>ItemNetTotalPrice</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -4438,20 +4520,6 @@
                     <output>false</output>
                     <type>Literal</type>
                     <value>false</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
-                    <name>NetUnitPrice</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>NetUnitPrice</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
-                    <name>Subtotal</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>ItemNetTotalPrice</value>
                 </parameters>
             </customElement>
             <description>Volume Discount</description>
