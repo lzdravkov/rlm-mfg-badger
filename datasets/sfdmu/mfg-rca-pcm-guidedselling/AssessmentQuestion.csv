@@ -1,0 +1,9 @@
+ActiveVersion.$$AssessmentQuestion.UniqueIndex$VersionNumber,CurrencyIsoCode,DataType,Description,DeveloperName,Name,QuestionCategory,QuestionText,RelatedQuestion.UniqueIndex,ShouldExcludeFromMetadata,ShouldHideInDesigner,UniqueIndex
+Seismic_Certification;1,USD,Select,,Seismic_Certification,Seismic Certification,Power Management,What seismic certification do you require?,,false,false,Seismic_Certification
+Standards_and_Compliance;1,USD,Select,,Standards_and_Compliance,Standards and Compliance,Power Management,Review Standards & Compliancy Requirements,,false,false,Standards_and_Compliance
+Customer_Industry;1,USD,Select,,Customer_Industry,Customer Industry,Chemical,Customer Industry,,false,false,Customer_Industry
+Chemical_Regulatory_Requirements;1,USD,Multiselect,,Chemical_Regulatory_Requirements,Chemical Regulatory Requirements,Chemical,What are the performance/regulatory requirements,,false,false,Chemical_Regulatory_Requirements
+Special_Application;1,USD,Select,,Special_Application,Special Application,Power Management,Do you require a motor starting special application?,,false,false,Special_Application
+Generator_Application;1,USD,Select,,Generator_Application,Generator Application,Power Management,What is the intended generator application?,,false,false,Generator_Application
+Emission_Certification;1,USD,Select,,Emission_Certification,Emission Certification,Power Management,Do you have emissions certification requirements?,,false,false,Emission_Certification
+Chemical_Application;1,USD,Select,,Chemical_Application,Chemical Application,Chemical,What is the primary application?,,false,false,Chemical_Application

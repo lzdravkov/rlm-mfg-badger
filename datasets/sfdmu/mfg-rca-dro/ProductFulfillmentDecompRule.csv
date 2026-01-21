@@ -1,0 +1,7 @@
+$$Name$SourceProduct.StockKeepingUnit$DestinationProduct.StockKeepingUnit,DestinationProduct.StockKeepingUnit,Name,Priority,SourceClassIdentifier,SourceIdentifier,SourceProduct.StockKeepingUnit,SourceProductClassification.Name
+Add Coupling Hub;BG-KIT-CPL95;BG-CPL-6001,BG-CPL-6001,Add Coupling Hub,,,01tHp00000CmixfIAB,BG-KIT-CPL95,
+Add Coupling Spider;BG-KIT-CPL95;BG-CPL-6002,BG-CPL-6002,Add Coupling Spider,,,01tHp00000CmixfIAB,BG-KIT-CPL95,
+Add 1HP Motor;BG-KIT-MTR1;BG-MTR-1201,BG-MTR-1201,Add 1HP Motor,,,01tHp00000CmixgIAB,BG-KIT-MTR1,
+Add VFD;BG-KIT-MTR1;BG-MTR-1202,BG-MTR-1202,Add VFD,,,01tHp00000CmixgIAB,BG-KIT-MTR1,
+Add Radiator Assembly;FESBA-FRD;FESBA-PM-RAD,FESBA-PM-RAD,Add Radiator Assembly,,,01tHp00000CmiyKIAR,FESBA-FRD,
+Add Final Exhaust System;FESBA-FRD;PM-EXH-T4F,PM-EXH-T4F,Add Final Exhaust System,,,01tHp00000CmiyKIAR,FESBA-FRD,

@@ -1,0 +1,12 @@
+$$Name$Product.StockKeepingUnit,Action,FulfillmentProcess.Name,FulfillmentStepDefnGroup.Name,Name,Product.StockKeepingUnit,ProductClassification.Name,SourceClassIdentifier,SourceIdentifier,Type
+Step1: BG-KIT-MTR1;BG-KIT-MTR1,Add,,Inventory Allocation & Sourcing,Step1: BG-KIT-MTR1,BG-KIT-MTR1,,,,
+Step1: BG-KIT-CPL95;BG-KIT-CPL95,Add,,Inventory Allocation & Sourcing,Step1: BG-KIT-CPL95,BG-KIT-CPL95,,,,
+Step2: BG-KIT-MTR1;BG-KIT-MTR1,Add,,Shipment & Invoicing,Step2: BG-KIT-MTR1,BG-KIT-MTR1,,,,
+Step2: BG-KIT-CPL95;BG-KIT-CPL95,Add,,Shipment & Invoicing,Step2: BG-KIT-CPL95,BG-KIT-CPL95,,,,
+Work Order: Service Contract;SC-GOLD,Add,,Work Order,Work Order: Service Contract,SC-GOLD,,,01tHp00000CmixjIAB,
+IoT: Add Service Contract;SC-GOLD,Add,,Equipment Health Check,IoT: Add Service Contract,SC-GOLD,,,01tHp00000CmixjIAB,
+Add: Svc Contract Gold;SC-GOLD,Add,,Service Contract & Assetization,Add: Svc Contract Gold,SC-GOLD,,,01tHp00000CmixjIAB,
+Step4: FESBA;FESBA-FRD,Add,,On-Site Installation and Commissioning,Step4: FESBA,FESBA-FRD,,,,
+Step1: FESBA;FESBA-FRD,Add,,Order Configuration Verification,Step1: FESBA,FESBA-FRD,,,,
+Step2: FESBA;FESBA-FRD,Add,,Production and Assembly,Step2: FESBA,FESBA-FRD,,,,
+Step3: FESBA;FESBA-FRD,Add,,Logistics and Transportation,Step3: FESBA,FESBA-FRD,,,,

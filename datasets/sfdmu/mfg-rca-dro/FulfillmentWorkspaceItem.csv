@@ -1,0 +1,13 @@
+$$FulfillmentWorkspace.Name$FulfillmentStepDefinitionGroup.Name,FulfillmentStepDefinitionGroup.Name,FulfillmentWorkspace.Name,Name,ShowOrder
+Service Contract Fulfillment;Work Order,Work Order,Service Contract Fulfillment,FWI-000000005,2
+Service Contract Fulfillment;Service Contract & Assetization,Service Contract & Assetization,Service Contract Fulfillment,FWI-000000006,3
+Software Bundle Fulfillment;Order Processing,Order Processing,Software Bundle Fulfillment,FWI-000000001,1
+Software Bundle Fulfillment;Finance,Finance,Software Bundle Fulfillment,FWI-000000003,4
+Service Contract Fulfillment;Equipment Health Check,Equipment Health Check,Service Contract Fulfillment,FWI-000000004,1
+Software Bundle Fulfillment;Tenant Provisioning + Activation,Tenant Provisioning + Activation,Software Bundle Fulfillment,FWI-000000002,2
+FESBA Generator Fulfillment;Order Configuration Verification,Order Configuration Verification,FESBA Generator Fulfillment,FWI-000000009,1
+FESBA Generator Fulfillment;Logistics and Transportation,Logistics and Transportation,FESBA Generator Fulfillment,FWI-000000011,3
+FESBA Generator Fulfillment;On-Site Installation and Commissioning,On-Site Installation and Commissioning,FESBA Generator Fulfillment,FWI-000000012,4
+FESBA Generator Fulfillment;Production and Assembly,Production and Assembly,FESBA Generator Fulfillment,FWI-000000010,2
+Kit Order Orchestration;Inventory Allocation & Sourcing,Inventory Allocation & Sourcing,Kit Order Orchestration,FWI-000000007,1
+Kit Order Orchestration;Shipment & Invoicing,Shipment & Invoicing,Kit Order Orchestration,FWI-000000008,2

@@ -1,0 +1,20 @@
+$$Name$DependsOnStepDefinition.Name$FulfillmentStepDefinition.Name,DependencyScope,DependsOnStepDefinition.$$Name$StepDefinitionGroup.Name,FulfillmentStepDefinition.$$Name$StepDefinitionGroup.Name,Name
+Installation After Delivery Confirmation;Confirm Delivery;Install and Commission,Plan,Confirm Delivery;Logistics and Transportation,Install and Commission;On-Site Installation and Commissioning,Installation After Delivery Confirmation
+Wait on Provision Before Converting;Validate Order Info;Convert Order to Asset,Plan,Validate Order Info;Order Processing,Convert Order to Asset;Tenant Provisioning + Activation,Wait on Provision Before Converting
+Require Validation Before Provisioning;Validate Order Info;Stage New Tenant for Provisioning,Plan,Validate Order Info;Order Processing,Stage New Tenant for Provisioning;Tenant Provisioning + Activation,Require Validation Before Provisioning
+Asset Conversion then Bill;Convert Order to Asset;Initiate Billing,Plan,Convert Order to Asset;Tenant Provisioning + Activation,Initiate Billing;Finance,Asset Conversion then Bill
+Receive Payment;Initiate Billing;Post Invoice,Plan,Initiate Billing;Finance,Post Invoice;Finance,Receive Payment
+Post to Pay;Post Invoice;Receive Payment,Plan,Post Invoice;Finance,Receive Payment;Finance,Post to Pay
+Health Check to Review Report;IoT Health Check;Review IoT Report,Plan,IoT Health Check;Equipment Health Check,Review IoT Report;Equipment Health Check,Health Check to Review Report
+Create Work Order After Health Check;IoT Health Check;Create Work Order,Plan,IoT Health Check;Equipment Health Check,Create Work Order;Work Order,Create Work Order After Health Check
+Complete Work Order;Create Work Order;Work Order Completed,Plan,Create Work Order;Work Order,Work Order Completed;Work Order,Complete Work Order
+Create Svc Contract;Work Order Completed;Create Service Contract,Plan,Work Order Completed;Work Order,Create Service Contract;Service Contract & Assetization,Create Svc Contract
+Deliver After Assembly;Generator Assembly;Confirm Delivery,Plan,Generator Assembly;Production and Assembly,Confirm Delivery;Logistics and Transportation,Deliver After Assembly
+Source Components After Validation;Customer BOM sign-off;Source specialized components,Plan,Customer BOM sign-off;Order Configuration Verification,Source specialized components;Production and Assembly,Source Components After Validation
+Assembly After Sourcing Components;Source specialized components;Generator Assembly,Plan,Source specialized components;Production and Assembly,Generator Assembly;Production and Assembly,Assembly After Sourcing Components
+Planning After BOM Validation;Customer BOM sign-off;Finish logistics plan,Plan,Customer BOM sign-off;Order Configuration Verification,Finish logistics plan;Logistics and Transportation,Planning After BOM Validation
+Delivery After Logistics Planning;Finish logistics plan;Confirm Delivery,Plan,Finish logistics plan;Logistics and Transportation,Confirm Delivery;Logistics and Transportation,Delivery After Logistics Planning
+Engineering to BOM Validation;Engineering Verification;Customer BOM sign-off,Plan,Engineering Verification;Order Configuration Verification,Customer BOM sign-off;Order Configuration Verification,Engineering to BOM Validation
+Kit Shipment;Consolidated Fulfillment;Shipment,Plan,Consolidated Fulfillment;Inventory Allocation & Sourcing,Shipment;Shipment & Invoicing,Kit Shipment
+Generate Invoice;Consolidated Fulfillment;Generate Invoice,Plan,Consolidated Fulfillment;Inventory Allocation & Sourcing,Generate Invoice;Shipment & Invoicing,Generate Invoice
+Fulfillment Consolidation;Inventory Allocation;Consolidated Fulfillment,Plan,Inventory Allocation;Inventory Allocation & Sourcing,Consolidated Fulfillment;Inventory Allocation & Sourcing,Fulfillment Consolidation
