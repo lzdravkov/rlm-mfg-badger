@@ -1,0 +1,23 @@
+{
+  "apiVersion": "65.0",
+  "excludeIdsFromCSVFiles": "true",
+  "objectSets": [
+    {
+      "objects": [
+        {
+          "query": "SELECT Name, AdvAccountForecastSetId, Status, AccountId FROM AdvAcctForecastSetPartner",
+          "operation": "Upsert",
+          "externalId": "Name;AdvAccountForecastSet.DeveloperName;Account.Name",
+          "excluded": false
+        },
+        {
+            "query": "SELECT Name, Status, AccountId, Account_Manager_Forecasted_Quantity__c, Account_Manager_Forecasted_Revenue__c, AdvAcctForecastSetUseId, AdvAcctForecastSetPartnerId, Category__c, LastYearOrderQuantity, LastYearOrderRevenue, OpportunityQuantity, OpportunityRevenue, OrderQuantity, OrderRevenue, PeriodId, PeriodStartDate, ProductId, SalesAgreementQuantity, SalesAgreementRevenue FROM AdvAccountForecastFact",
+            "operation": "Upsert",
+            "externalId": "Period.FullyQualifiedLabel;AdvAcctForecastSetPartner.Name;Product.StockKeepingUnit;Category__r.Name"
+        }
+
+      ]
+    }
+  ],
+  "orgs": []
+}

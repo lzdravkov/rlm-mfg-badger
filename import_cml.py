@@ -6,7 +6,7 @@ import subprocess
 
 DATA_DIR = "data"
 BLOB_DIR = os.path.join(DATA_DIR, "blobs")
-TARGET_ALIAS = "tgtOrg"
+TARGET_ALIAS = "rlm-base__mfg-260-test"
 
 access_token = None
 instance_url = None

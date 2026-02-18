@@ -1,0 +1,54 @@
+Code,Description,MaxBundleComponents,MigrationKey__c,MinBundleComponents,Name,ParentGroup.MigrationKey__c,ParentProduct.StockKeepingUnit,Sequence
+Attachments,,,Attachments;414LP-KAA-E-SSL,1,Attachments,,414LP-KAA-E-SSL,20
+Cabin Options,,,Cabin Options;414LP-KAA-E-SSL,,Cabin Options,,414LP-KAA-E-SSL,30
+SkidSteerWarranty,,1,SkidSteerWarranty;414LP-KAA-E-SSL,,Warranty,,414LP-KAA-E-SSL,40
+Subscription,,,Subscription;414LP-KAA-E-SSL,,Subscription,,414LP-KAA-E-SSL,50
+Tire Options,,1,Tire Options;414LP-KAA-E-SSL,1,Tire Options,,414LP-KAA-E-SSL,10
+Accessories,,,Accessories;FESBA-FRD,,Accessories,,FESBA-FRD,6
+Accessories Main,,99,Accessories Main;FESBA-FRD,1,Accessories Main,Accessories;FESBA-FRD,FESBA-FRD,50
+Air Cleaner Duty Rating,,1,Air Cleaner Duty Rating;FESBA-FRD,1,Air Cleaner Duty Rating,Engine;FESBA-FRD,FESBA-FRD,18
+Alternator,,,Alternator;FESBA-FRD,,Alternator,,FESBA-FRD,2
+Battery Charging Alternator,,1,Battery Charging Alternator;FESBA-FRD,1,Battery Charging Alternator,Engine;FESBA-FRD,FESBA-FRD,20
+Bearing Hardened Cartridge,,1,Bearing Hardened Cartridge;FESBA-FRD,0,Bearing Hardened Cartridge,Alternator;FESBA-FRD,FESBA-FRD,31
+Circuit Breaker or Box Arrangement,,1,Circuit Breaker or Box Arrangement;FESBA-FRD,1,Circuit Breaker or Box Arrangement,Alternator;FESBA-FRD,FESBA-FRD,34
+Circuit Breaker or Terminal Box,,2,Circuit Breaker or Terminal Box;FESBA-FRD,0,Circuit Breaker or Terminal Box,Alternator;FESBA-FRD,FESBA-FRD,35
+Control,,,Control;FESBA-FRD,,Control,,FESBA-FRD,4
+Control Cabinet Heater,,1,Control Cabinet Heater;FESBA-FRD,0,Control Cabinet Heater,Control;FESBA-FRD,FESBA-FRD,43
+Control Main,,1,Control Main;FESBA-FRD,1,Control Main,Control;FESBA-FRD,FESBA-FRD,40
+Control Options,,99,Control Options;FESBA-FRD,0,Control Options,Control;FESBA-FRD,FESBA-FRD,44
+Coolant Heater,,1,Coolant Heater;FESBA-FRD,0,Coolant Heater,Engine;FESBA-FRD,FESBA-FRD,24
+Cooling System,,1,Cooling System;FESBA-FRD,1,Cooling System,Engine;FESBA-FRD,FESBA-FRD,25
+Cooling System Connection,,1,Cooling System Connection;FESBA-FRD,0,Cooling System Connection,Engine;FESBA-FRD,FESBA-FRD,26
+Cooling System Protection,,1,Cooling System Protection;FESBA-FRD,1,Cooling System Protection,Engine;FESBA-FRD,FESBA-FRD,27
+Differential CT's,,99,Differential CT's;FESBA-FRD,0,Differential CT's,Alternator;FESBA-FRD,FESBA-FRD,33
+Enclosure,,1,Enclosure;FESBA-FRD,1,Enclosure,Accessories;FESBA-FRD,FESBA-FRD,49
+Engine,,,Engine;FESBA-FRD,,Engine,,FESBA-FRD,3
+Engine Model,,1,Engine Model;FESBA-FRD,1,Engine Model,Engine;FESBA-FRD,FESBA-FRD,17
+Fuel Filter,,1,Fuel Filter;FESBA-FRD,1,Fuel Filter,Engine;FESBA-FRD,FESBA-FRD,23
+Fuel System Options,,99,Fuel System Options;FESBA-FRD,0,Fuel System Options,Engine;FESBA-FRD,FESBA-FRD,22
+General,,,General;FESBA-FRD,,General,,FESBA-FRD,1
+Heater,,1,Heater;FESBA-FRD,0,Heater,Alternator;FESBA-FRD,FESBA-FRD,28
+Install & Misc,,,Install & Misc;FESBA-FRD,,Install & Misc,,FESBA-FRD,7
+Installation,,,Installation;FESBA-FRD,,Installation,Install & Misc;FESBA-FRD,FESBA-FRD,7
+Literature Language,,99,Literature Language;FESBA-FRD,1,Literature Language,Services;FESBA-FRD,FESBA-FRD,47
+Load Connections,,4,Load Connections;FESBA-FRD,0,Load Connections,Alternator;FESBA-FRD,FESBA-FRD,36
+Main Alternator,,1,Main Alternator;FESBA-FRD,1,Main Alternator,Alternator;FESBA-FRD,FESBA-FRD,16
+Misc,,,Misc;FESBA-FRD,,Misc,Install & Misc;FESBA-FRD,FESBA-FRD,2
+Model,,1,Model;FESBA-FRD,1,Model,General;FESBA-FRD,FESBA-FRD,7
+Oil System Options,,99,Oil System Options;FESBA-FRD,0,Oil System Options,Engine;FESBA-FRD,FESBA-FRD,21
+Output Terminals,,1,Output Terminals;FESBA-FRD,0,Output Terminals,Alternator;FESBA-FRD,FESBA-FRD,31
+Packing for Shipment,,1,Packing for Shipment;FESBA-FRD,1,Packing for Shipment,Services;FESBA-FRD,FESBA-FRD,48
+PMG,,1,PMG;FESBA-FRD,1,PMG,Alternator;FESBA-FRD,FESBA-FRD,30
+Primary Electrical Isolation Device Options,,99,Primary Electrical Isolation Device Options;FESBA-FRD,0,Primary Electrical Isolation Device Options,Alternator;FESBA-FRD,FESBA-FRD,39
+Services,,,Services;FESBA-FRD,,Services,,FESBA-FRD,5
+Starter Motor,,1,Starter Motor;FESBA-FRD,1,Starter Motor,Engine;FESBA-FRD,FESBA-FRD,19
+Temperature Sensors,,2,Temperature Sensors;FESBA-FRD,0,Temperature Sensors,Alternator;FESBA-FRD,FESBA-FRD,29
+Testing,,99,Testing;FESBA-FRD,1,Testing,Services;FESBA-FRD,FESBA-FRD,46
+Voltage Connection,,1,Voltage Connection;FESBA-FRD,1,Voltage Connection,General;FESBA-FRD,FESBA-FRD,15
+Warranty,,1,Warranty;FESBA-FRD,1,Warranty,Services;FESBA-FRD,FESBA-FRD,45
+CTM PCG,,,CTM PCG;FUCEL,,Cooling / Thermal Management,,FUCEL,2
+EC PCG,,,EC PCG;FUCEL,,Electrical / Control,,FUCEL,3
+FSS PCG,,,FSS PCG;FUCEL,,Fuel Supply / Storage,,FUCEL,1
+SWGB PCG,,99,SWGB PCG;PCSWG,1,Switchgear Bay,,PCSWG,1
+Included Entitlements,,,Included Entitlements;SC-GOLD,,Included Entitlements,,SC-GOLD,10
+Optional Entitlements,,,Optional Entitlements;SC-GOLD,,Optional Entitlements,,SC-GOLD,20
